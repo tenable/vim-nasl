@@ -1,0 +1,3 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=1285
+
+Small syntax file for the Nessus Attack Scripting Language. It uses the built-in functions and constants found in nasl_init.c and the keywords found in nasl_grammar.tab.c. Arguments like english:, deutsch:, data:,etc are matched using regexes instead of fixed names.
