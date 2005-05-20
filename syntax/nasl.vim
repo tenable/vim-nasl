@@ -173,7 +173,7 @@ syn match   naslNumber display contained "\d\+\>"
 
 " Arguments in a function call
 syn match   naslArg display contained "\a\+:"
-syn region  naslCall display transparent start="(" end=")" contains=naslArg,naslNumbers,naslString
+syn region  naslCall display transparent start="(" end=")" contains=ALLBUT,naslNumber 
 
 if version >= 508 || !exists("did_c_syn_inits")
   if version < 508
