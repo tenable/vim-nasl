@@ -173,7 +173,12 @@ syn match   naslNumber display contained "\d\+\>"
 
 " Arguments in a function call
 syn match   naslArg display contained "\a\+:"
-syn region  naslCall display transparent start="(" end=")" contains=ALLBUT,naslNumber 
+
+" Parenthesis and Bracket Errors
+syn region  naslParen display transparent start="(" end=")" contains=ALLBUT,naslNumber,naslParenError 
+syn region naslBracket display transparent start="{" end="}" contains=ALLBUT,naslBracketError,naslNumber,naslArg
+syn match naslBracketError display "}"
+syn match naslParenError display ")"
 
 if version >= 508 || !exists("did_c_syn_inits")
   if version < 508
@@ -190,6 +195,8 @@ if version >= 508 || !exists("did_c_syn_inits")
   HiLink naslComment Comment
   HiLink naslNumber SpecialChar
   HiLink naslArg Macro
+  HiLink naslParenError Error
+  HiLink naslBracketError Error
 endif
 let b:current_syntax = "nasl"
 
