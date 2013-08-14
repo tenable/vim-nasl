@@ -175,7 +175,7 @@ syn keyword naslKeyword include break local_var global_var
 
 " Special characters and strings
 syn match   naslSpecial	display contained "\\\(x\x\+\|\o\{1,3}\|.\|$\)"
-syn region  naslString	start=+L\="+ skip=+\\\\\|\\"+ end=+"+ contains=naslSpecial
+syn region  naslString	start=+L\="+ end=+"+
 syn region  naslString	start=+L\='+ skip=+\\\\\|\\"+ end=+'+ contains=naslSpecial
 
 " Comments
