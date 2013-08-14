@@ -187,7 +187,7 @@ syn match   naslNumber display contained "0x\x\+\>"
 syn match   naslNumber display contained "\d\+\>"
 
 " Arguments in a function call
-syn match   naslArg display contained "\a\+:"
+syn match   naslArg display contained "\a\+[_a-zA-Z]*:"
 
 " Parenthesis and Bracket Errors
 syn region  naslParen display transparent start="(" end=")" contains=ALLBUT,naslNumber,naslParenError 
