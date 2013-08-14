@@ -175,11 +175,11 @@ syn keyword naslKeyword include break local_var global_var
 
 " Special characters and strings
 syn match   naslSpecial	display contained "\\\(x\x\+\|\o\{1,3}\|.\|$\)"
-syn region  naslString	start=+L\="+ end=+"+
-syn region  naslString	start=+L\='+ skip=+\\\\\|\\"+ end=+'+ contains=naslSpecial
+syn region  naslString	start=+L\="+ end=+"+ contains=@Spell
+syn region  naslString	start=+L\='+ skip=+\\\\\|\\"+ end=+'+ contains=naslSpecial,@Spell
 
 " Comments
-syn region  naslComment	start="#" skip="\$" end="$" keepend
+syn region  naslComment	start="#" skip="\$" end="$" keepend contains=@Spell
 
 " Hexadecimal and integer numbers
 syn match   naslNumbers display transparent "\<\d\|\.\d" contains=naslNumber
