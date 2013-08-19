@@ -1,9 +1,10 @@
 " Vim syntax file
 " Language:	NASL
 " Maintainer:	Herman Polloni <polloni@confianze.com>
-" Last Change:	2010 Sept 14
+" Last Change:	2013 Aug 19
 "
 " Updated by Jacob Hammack <jhammack@tenable.com>
+" Additional updates by Benjamin Bergman <bbergman@tenable.com>
 
 " Remove any old syntax stuff that was loaded (5.x) or quit when a syntax file
 " was already loaded (6.x).
