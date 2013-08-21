@@ -5,27 +5,27 @@
 "==========================================================================
 
 if exists("g:loaded_syntastic_nasl_nasl_checker")
-    finish
+	finish
 endif
 let g:loaded_syntastic_nasl_nasl_checker=1
 
 function! SyntaxCheckers_nasl_nasl_IsAvailable()
-    return executable("nasl")
+	return executable("nasl")
 endfunction
 
 function! SyntaxCheckers_nasl_nasl_GetLocList()
-    let makeprg = syntastic#makeprg#build({
-        \ 'exe': "nasl",
-        \ 'args': '-XLW',
-        \ 'filetype': 'nasl',
-        \ 'subchecker': 'nasl' })
+	let makeprg = syntastic#makeprg#build({
+		\ 'exe': "nasl",
+		\ 'args': '-XLW',
+		\ 'filetype': 'nasl',
+		\ 'subchecker': 'nasl' })
 
-    " See ':help errorformat' for format details
+	" See ':help errorformat' for format details
 	" NASL 5.2
-    let errorformat = '%f(%l): %m'
+	let errorformat = '%f(%l): %m'
 
 	" NASL 5.0
-    let errorformat .= ',' . '%m (%f\, line %l)'
+	let errorformat .= ',' . '%m (%f\, line %l)'
 	let errorformat .= ',' . '(%f) %tARNING! %m (line %l)'
 	" multi-line syntax error
 	let errorformat .= ',' . '%Asyntax error\, %m'
@@ -34,9 +34,9 @@ function! SyntaxCheckers_nasl_nasl_GetLocList()
 	" Ignore all else
 	let errorformat .= ',' . '%-G%.%#'
 
-    return SyntasticMake({ 'makeprg': makeprg, 'errorformat': errorformat })
+	return SyntasticMake({ 'makeprg': makeprg, 'errorformat': errorformat })
 endfunction
 
 call g:SyntasticRegistry.CreateAndRegisterChecker({
-    \ 'filetype': 'nasl',
-    \ 'name': 'nasl'})
+	\ 'filetype': 'nasl',
+	\ 'name': 'nasl'})
