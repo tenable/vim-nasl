@@ -289,7 +289,7 @@ if version >= 508 || !exists("did_c_syn_inits")
   HiLink naslKeyword Conditional
   HiLink naslFunction StorageClass
   HiLink naslConstant Constant
-  HiLink naslSpecial SpecialChar
+  HiLink naslSpecial Special
   HiLink naslString String
   HiLink naslComment Comment
   HiLink naslNumber SpecialChar
