@@ -29,6 +29,7 @@ syn keyword naslFunction RegConnectRegistry RegOpenKey RegQueryInfoKey RegEnumKe
 syn keyword naslFunction NetUseAdd NetUseDel
 "File Functions
 syn keyword naslFunction CreateFile GetFileSize ReadFile CloseFile
+syn keyword naslFunction fread fwrite file_open file_close file_read file_write file_seek file_stat unlink get_tmp_dir find_in_path pread file_is_signed
 "Network Session Functions
 syn keyword naslFunction session_init
 "Patch Functions
@@ -132,6 +133,9 @@ syn keyword naslFunction NTLMv2_HASH
 syn keyword naslFunction nt_owf_gen
 syn keyword naslFunction lm_owf_gen
 syn keyword naslFunction ntv2_owf_gen
+
+" Time functions
+syn keyword naslFunction unixtime gettimeofday localtime mktime
 
 " Constants extracted from nasl_init.c
 syn keyword naslConstant TRUE
