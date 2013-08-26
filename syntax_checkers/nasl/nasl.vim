@@ -28,6 +28,7 @@ function! SyntaxCheckers_nasl_nasl_GetLocList()
 	let errorformat .= ',' . '%m (%f\, line %l)'
 	let errorformat .= ',' . '(%f) %tARNING! %m (line %l)'
 	let errorformat .= ',' . '(%f) %tARNING! %m'
+	let errorformat .= ',' . '(%f) %tARNING - %m line %l'
 	" multi-line syntax error
 	let errorformat .= ',' . '%Asyntax %trror\, %m'
 	              \ .  ',' . '%Z%.%# %l'
