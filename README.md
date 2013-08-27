@@ -25,7 +25,7 @@ autocmd FileType nasl setlocal shiftwidth=2 tabstop=2 expandtab softtabstop=2 co
 [Syntastic]
 -----------
 
-Currently, Syntastic support is provided by `nasl -XLW`. Ensure that it is in your path to enable this syntax checker.
+Currently, Syntastic support is provided by `nasl -XLW` (from the nessus package) or `nasl-parse parse` (from the nasl gem). Ensure that one of these is in your path to enable the syntax checker.
 
 [Tagbar]
 --------
