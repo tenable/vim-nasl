@@ -28,6 +28,14 @@ autocmd FileType nasl setlocal shiftwidth=2 tabstop=2 expandtab softtabstop=2 co
 
 Currently, Syntastic support is provided by `nasl -XLW` (from the nessus package) or `nasl-parse parse` (from the nasl gem). Ensure that one of these is in your path to enable the syntax checker.
 
+If you want to use both syntax checkers, you might want to add something like this to your `.vimrc`:
+
+```vim
+let g:syntastic_nasl_checkers = ['nasl_parse', 'nasl']
+```
+
+This will first run your file through `nasl-parse` and then, if no errors were found, run it through `nasl`.
+
 [Tagbar]
 --------
 
