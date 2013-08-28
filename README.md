@@ -11,6 +11,7 @@ Syntax Highlighting
 Add the following to your `.vimrc`:
 
 ```vim
+autocmd BufNewFile,BufRead *.audit set syntax=xml
 autocmd BufNewFile,BufRead *.nasl set filetype=nasl
 autocmd BufNewFile,BufRead *.inc set filetype=nasl
 autocmd BufNewFile,BufRead *.inc set indentexpr=
