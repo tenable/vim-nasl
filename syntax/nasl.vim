@@ -258,8 +258,9 @@ syn keyword naslKeyword include break local_var global_var
 
 " Special characters and strings
 syn match   naslSpecial	display contained "\\\(x\x\+\|\o\{1,3}\|.\|$\)"
+syn match   naslLongLink display contained "\"http.\{67,}\"" containedin=naslString
 syn region  naslString	start=+L\="+ end=+"+ contains=@Spell
-syn region  naslString	start=+L\='+ skip=+\\\\\|\\"+ end=+'+ contains=naslSpecial,@Spell
+syn region  naslString	start=+L\='+ skip=+\\\\\|\\"+ end=+'+ contains=naslSpecial,@Spell,naslLongLink
 syn keyword naslSpecial report_verbosity report_paranoia description thorough_tests
 
 " Comments
@@ -296,6 +297,7 @@ if version >= 508 || !exists("did_c_syn_inits")
   HiLink naslArg Macro
   HiLink naslParenError Error
   HiLink naslBracketError Error
+  HiLink naslLongLink Error
 endif
 let b:current_syntax = "nasl"
 
