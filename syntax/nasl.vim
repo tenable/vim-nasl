@@ -259,7 +259,7 @@ syn keyword naslKeyword include break local_var global_var
 " Special characters and strings
 syn match   naslSpecial	display contained "\\\(x\x\+\|\o\{1,3}\|.\|$\)"
 syn match   naslLongLink display contained "\"http.\{67,}\"" containedin=naslString
-syn region  naslString	start=+L\="+ end=+"+ contains=@Spell
+syn region  naslString	start=+L\="+ end=+"+ contains=@Spell,naslLongLink
 syn region  naslString	start=+L\='+ skip=+\\\\\|\\"+ end=+'+ contains=naslSpecial,@Spell,naslLongLink
 syn keyword naslSpecial report_verbosity report_paranoia description thorough_tests
 
