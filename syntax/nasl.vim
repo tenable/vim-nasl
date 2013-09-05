@@ -218,6 +218,7 @@ syn keyword naslConstant AUDIT_OS_NOT
 syn keyword naslConstant AUDIT_OS_RELEASE_NOT
 syn keyword naslConstant AUDIT_OS_SP_NOT_VULN
 syn keyword naslConstant AUDIT_PACKAGE_LIST_MISSING
+syn keyword naslConstant AUDIT_PACKAGE_NOT_AFFECTED
 syn keyword naslConstant AUDIT_PACKAGE_NOT_INSTALLED
 syn keyword naslConstant AUDIT_PARANOID
 syn keyword naslConstant AUDIT_PATCH_INSTALLED
