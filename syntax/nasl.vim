@@ -328,19 +328,19 @@ if version >= 508 || !exists("did_c_syn_inits")
   else
     command! -nargs=+ HiLink hi def link <args>
   endif
-  HiLink naslKeyword Conditional
-  HiLink naslFunction StorageClass
-  HiLink naslConstant Constant
-  HiLink naslLibGlobal Constant
-  HiLink naslSpecial Special
-  HiLink naslString String
-  HiLink naslComment Comment
-  HiLink naslNumber SpecialChar
-  HiLink naslSpecialChar SpecialChar
   HiLink naslArg Macro
-  HiLink naslParenError Error
   HiLink naslBracketError Error
+  HiLink naslComment Comment
+  HiLink naslConstant Constant
+  HiLink naslFunction StorageClass
+  HiLink naslKeyword Conditional
+  HiLink naslLibGlobal Define
   HiLink naslLongLink Error
+  HiLink naslNumber SpecialChar
+  HiLink naslParenError Error
+  HiLink naslSpecial Special
+  HiLink naslSpecialChar SpecialChar
+  HiLink naslString String
 endif
 let b:current_syntax = "nasl"
 
