@@ -253,6 +253,11 @@ syn keyword naslConstant AUDIT_WMI_FAIL
 syn keyword naslConstant AUDIT_WMI_NONE
 syn keyword naslConstant AUDIT_WRONG_WEB_SERVER
 
+syn keyword naslConstant DIR_SEPARATOR
+syn keyword naslConstant UNKNOWN_VER
+syn keyword naslConstant DEFAULT_HEADER
+
+
 " Keywords extracted from nasl_grammar.tab.c
 syn keyword naslKeyword if else for while repeat until foreach function return
 syn keyword naslKeyword include break local_var global_var
