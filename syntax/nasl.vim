@@ -295,7 +295,7 @@ syn keyword naslLibGlobal UNKNOWN_VER
 
 " Keywords extracted from nasl_grammar.tab.c
 syn keyword naslKeyword if else for while repeat until foreach function return
-syn keyword naslKeyword include break local_var global_var
+syn keyword naslKeyword include break local_var global_var continue
 
 " Special characters and strings
 syn match   naslSpecialChar display contained "\\\(x\x\+\|\o\{1,3}\|.\|$\)"
