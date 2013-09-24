@@ -298,7 +298,7 @@ syn keyword naslKeyword if else for while repeat until foreach function return
 syn keyword naslKeyword include break local_var global_var continue
 
 " Special characters and strings
-syn match   naslSpecialChar display contained "\\\(x\x\+\|\o\{1,3}\|.\|$\)"
+syn match   naslSpecialChar display contained "\\\(x\x\{1,2}\|\o\{1,3}\|.\|$\)"
 syn match   naslLongLink display contained "\"http.\{67,}\"" containedin=naslString
 syn region  naslString	start=+L\="+ end=+"+ contains=@Spell,naslLongLink
 syn region  naslString	start=+L\='+ skip=+\\\\\|\\"+ end=+'+ contains=naslSpecialChar,@Spell,naslLongLink
