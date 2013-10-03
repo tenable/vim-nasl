@@ -183,6 +183,7 @@ syn keyword naslConstant ACT_SCANNER
 syn keyword naslConstant ACT_SETTINGS
 syn keyword naslConstant ACT_KILL_HOST
 syn keyword naslConstant ACT_END
+syn keyword naslConstant ACT_END_REPORT
 syn keyword naslConstant MSG_OOB
 
 " Constants from audit.inc
