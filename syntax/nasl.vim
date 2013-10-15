@@ -22,6 +22,7 @@ syn keyword naslFunction script_require_keys script_require_ports script_require
 syn keyword naslFunction script_add_preference script_get_preference script_id script_cve_id script_bugtraq_id
 syn keyword naslFunction script_get_preference_file_content script_get_preference_file_location
 syn keyword naslFunction script_set_attribute script_end_attributes
+syn keyword naslFunction xscript_cvs_date xscript_set_attribute
 "KB Functions
 syn keyword naslFunction kb_smb_name kb_smb_transport kb_smb_login kb_smb_password kb_smb_domain
 "Registry Functions
