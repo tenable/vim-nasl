@@ -307,7 +307,7 @@ syn region  naslString	start=+L\='+ skip=+\\\\\|\\"+ end=+'+ contains=naslSpecia
 syn keyword naslSpecial report_verbosity report_paranoia description thorough_tests
 
 " Comments
-syn region  naslComment	start="#" skip="\$" end="$" keepend contains=@Spell
+syn region  naslComment	start="#" skip="\$" end="$" keepend contains=@Spell,naslSpaceError
 
 " Hexadecimal and integer numbers
 syn match   naslNumbers display transparent "\<\d\|\.\d" contains=naslNumber
@@ -322,6 +322,16 @@ syn region  naslParen display transparent start="(" end=")" contains=ALLBUT,nasl
 syn region naslBracket display transparent start="{" end="}" contains=ALLBUT,naslBracketError,naslNumber,naslArg
 syn match naslBracketError display "}"
 syn match naslParenError display ")"
+
+"when wanted, highlight trailing white space
+if exists("nasl_space_errors")
+  if !exists("nasl_no_trail_space_error")
+    syn match	naslSpaceError	display excludenl "\s\+$"
+  endif
+  if !exists("nasl_no_tab_space_error")
+    syn match	naslSpaceError	display "\t\+"
+  endif
+endif
 
 if version >= 508 || !exists("did_c_syn_inits")
   if version < 508
@@ -340,6 +350,7 @@ if version >= 508 || !exists("did_c_syn_inits")
   HiLink naslLongLink Error
   HiLink naslNumber SpecialChar
   HiLink naslParenError Error
+  HiLink naslSpaceError ErrorMsg
   HiLink naslSpecial Special
   HiLink naslSpecialChar SpecialChar
   HiLink naslString String
