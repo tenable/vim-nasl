@@ -188,6 +188,8 @@ syn keyword naslConstant ACT_KILL_HOST
 syn keyword naslConstant ACT_END
 syn keyword naslConstant ACT_END_REPORT
 syn keyword naslConstant MSG_OOB
+syn keyword naslConstant BYTE_ORDER_BIG_ENDIAN
+syn keyword naslConstant BYTE_ORDER_LITTLE_ENDIAN
 
 " Constants from audit.inc
 syn keyword naslLibGlobal AUDIT_ACTIVEX
