@@ -144,6 +144,8 @@ syn keyword naslFunction NTLMv2_HASH
 syn keyword naslFunction nt_owf_gen
 syn keyword naslFunction lm_owf_gen
 syn keyword naslFunction ntv2_owf_gen
+syn keyword naslFunction start_trace
+syn keyword naslFunction stop_trace
 
 " Time functions
 syn keyword naslFunction unixtime gettimeofday localtime mktime
