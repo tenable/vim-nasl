@@ -5,6 +5,8 @@ Vim extensions for programming in NASL.
 
 Installation can be done through [Vundle] or your favourite vim plugin manager.
 
+Alternatively, for a bare-bones or custom install, just clone this repo and copy these folders (indent, syntax, syntax_checkers) into ~/.vim, then proceed with the instructions below.
+
 Syntax Highlighting
 -------------------
 
