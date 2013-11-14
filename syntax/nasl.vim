@@ -308,7 +308,7 @@ syn match   naslSpecialChar display contained "\\\(x\x\{1,2}\|\o\{1,3}\|.\|$\)"
 syn match   naslLongLink display contained "\"http.\{67,}\"" containedin=naslString
 syn region  naslString	start=+L\="+ end=+"+ contains=@Spell,naslLongLink
 syn region  naslString	start=+L\='+ skip=+\\\\\|\\"+ end=+'+ contains=naslSpecialChar,@Spell,naslLongLink
-syn keyword naslSpecial report_verbosity report_paranoia description thorough_tests
+syn keyword naslSpecial experimental_scripts,report_verbosity,debug_level,thorough_tests,report_paranoia,supplied_logins_only
 
 " Comments
 syn region  naslComment	start="#" skip="\$" end="$" keepend contains=@Spell,naslSpaceError
