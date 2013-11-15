@@ -10,7 +10,7 @@ endif
 let g:loaded_syntastic_nasl_nasl_checker=1
 
 function! SyntaxCheckers_nasl_nasl_GetLocList() dict
-	let makeprg = syntastic#makeprg#build({ 'args': '-XLW' })
+	let makeprg = self.makeprgBuild({ 'args': '-XLW' })
 
 	" See ':help errorformat' for format details
 	" NASL 5.2

@@ -10,7 +10,7 @@ endif
 let g:loaded_syntastic_nasl_nasl_parse_checker=1
 
 function! SyntaxCheckers_nasl_nasl_parse_GetLocList() dict
-	let makeprg = syntastic#makeprg#build({ 'args': 'parse' })
+	let makeprg = self.makeprgBuild({ 'args': 'parse' })
 
 	" See ':help errorformat' for format details
 	let errorformat = '%+AThe language%.%#,' .
