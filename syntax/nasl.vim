@@ -5,6 +5,7 @@
 "
 " Updated by Jacob Hammack <jhammack@tenable.com>
 " Additional updates by Benjamin Bergman <bbergman@tenable.com>
+" Additional updates by Scott Walsh <swalsh@tenable.com>
 
 " Remove any old syntax stuff that was loaded (5.x) or quit when a syntax file
 " was already loaded (6.x).
@@ -308,7 +309,8 @@ syn match   naslSpecialChar display contained "\\\(x\x\{1,2}\|\o\{1,3}\|.\|$\)"
 syn match   naslLongLink display contained "\"http.\{67,}\"" containedin=naslString
 syn region  naslString	start=+L\="+ end=+"+ contains=@Spell,naslLongLink
 syn region  naslString	start=+L\='+ skip=+\\\\\|\\"+ end=+'+ contains=naslSpecialChar,@Spell,naslLongLink
-syn keyword naslSpecial experimental_scripts,report_verbosity,debug_level,thorough_tests,report_paranoia,supplied_logins_only
+syn keyword naslSpecial experimental_scripts report_verbosity debug_level thorough_tests report_paranoia supplied_logins_only
+syn match   naslSpecial display contained "CVSS2\v#AV:./AC:./Au:./C:./I:./A:." containedin=naslString
 
 " Comments
 syn region  naslComment	start="#" skip="\$" end="$" keepend contains=@Spell,naslSpaceError
