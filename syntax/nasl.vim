@@ -249,6 +249,7 @@ syn keyword naslLibGlobal AUDIT_UNKNOWN_ARCH
 syn keyword naslLibGlobal AUDIT_UNKNOWN_WEB_APP_VER
 syn keyword naslLibGlobal AUDIT_UNKNOWN_WEB_SERVER_VER
 syn keyword naslLibGlobal AUDIT_VER_FAIL
+syn keyword naslLibGlobal AUDIT_VER_NOT_GRANULAR
 syn keyword naslLibGlobal AUDIT_WEB_APP_EXT_NOT_AFFECTED
 syn keyword naslLibGlobal AUDIT_WEB_APP_EXT_NOT_INST
 syn keyword naslLibGlobal AUDIT_WEB_APP_NOT_AFFECTED
