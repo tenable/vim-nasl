@@ -300,6 +300,16 @@ syn keyword naslLibGlobal TLS_10
 syn keyword naslLibGlobal TLS_11
 syn keyword naslLibGlobal TLS_12
 syn keyword naslLibGlobal UNKNOWN_VER
+syn keyword naslLibGlobal HCF_CONNECT
+syn keyword naslLibGlobal HCF_NOAUTH
+syn keyword naslLibGlobal HCF_NOENT
+syn keyword naslLibGlobal HCF_ERR
+syn keyword naslLibGlobal HCF_NOVER
+syn keyword naslLibGlobal HCF_OK
+syn keyword naslLibGlobal HCF_OLDER
+syn keyword naslLibGlobal HCF_UNACCESSIBLE_SHARE
+syn keyword naslLibGlobal HCF_ACCESSIBLE_SHARE
+
 
 " Keywords extracted from nasl_grammar.tab.c
 syn keyword naslKeyword if else for while repeat until foreach function return
@@ -347,7 +357,7 @@ if version >= 508 || !exists("did_c_syn_inits")
   else
     command! -nargs=+ HiLink hi def link <args>
   endif
-  HiLink naslArg Macro
+  HiLink naslArg Identifier
   HiLink naslBracketError Error
   HiLink naslComment Comment
   HiLink naslConstant Constant
