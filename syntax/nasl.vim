@@ -256,6 +256,7 @@ syn keyword naslLibGlobal AUDIT_WEB_APP_NOT_AFFECTED
 syn keyword naslLibGlobal AUDIT_WEB_APP_NOT_INST
 syn keyword naslLibGlobal AUDIT_WEB_BANNER_NOT
 syn keyword naslLibGlobal AUDIT_WEB_FILES_NOT
+syn keyword naslLibGlobal AUDIT_WEB_NO_SERVER_HEADER
 syn keyword naslLibGlobal AUDIT_WIN_SERVER_CORE
 syn keyword naslLibGlobal AUDIT_WMI_FAIL
 syn keyword naslLibGlobal AUDIT_WMI_NONE
