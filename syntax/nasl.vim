@@ -318,10 +318,10 @@ syn keyword naslKeyword include break local_var global_var continue
 
 " Special characters and strings
 syn match   naslSpecialChar display contained "\\\(x\x\{1,2}\|\o\{1,3}\|.\|$\)"
-syn match   naslLongLink display contained "\"http.\{67,}\"" containedin=naslString
+syn match   naslLongLink display contained "\"http://[^"]\{-64,}\"" containedin=naslString
 syn region  naslString	start=+L\="+ end=+"+ contains=@Spell,naslLongLink
 syn region  naslString	start=+L\='+ skip=+\\\\\|\\"+ end=+'+ contains=naslSpecialChar,@Spell,naslLongLink
-syn keyword naslSpecial description experimental_scripts report_verbosity debug_level thorough_tests report_paranoia supplied_logins_only
+syn keyword naslSpecial description experimental_scripts report_verbosity debug_level thorough_tests report_paranoia supplied_logins_only _FCT_ANON_ARGS
 syn match   naslSpecial display contained "CVSS2\v#AV:./AC:./Au:./C:./I:./A:." containedin=naslString
 
 " Comments
