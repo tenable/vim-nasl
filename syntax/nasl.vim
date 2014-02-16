@@ -166,6 +166,7 @@ syn keyword naslConstant ENCAPS_SSLv23
 syn keyword naslConstant ENCAPS_SSLv2
 syn keyword naslConstant ENCAPS_SSLv3
 syn keyword naslConstant ENCAPS_TLSv1
+syn keyword naslConstant ENCAPS_VERIFY_PEER
 syn keyword naslConstant NASL_LEVEL
 syn keyword naslConstant TH_FIN
 syn keyword naslConstant TH_SYN
