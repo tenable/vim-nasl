@@ -50,6 +50,7 @@ syn keyword naslFunction get_host_name
 syn keyword naslFunction get_host_ip
 syn keyword naslFunction get_host_open_port
 syn keyword naslFunction get_port_state
+syn keyword naslFunction get_prefrence
 syn keyword naslFunction get_tcp_port_state
 syn keyword naslFunction get_udp_port_state
 syn keyword naslFunction scanner_add_port
