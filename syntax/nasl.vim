@@ -142,6 +142,7 @@ syn keyword naslFunction HMAC_DSS
 syn keyword naslFunction HMAC_RIPEMD160
 syn keyword naslFunction NTLMv1_HASH
 syn keyword naslFunction NTLMv2_HASH
+syn keyword naslFunction nasl_level
 syn keyword naslFunction nt_owf_gen
 syn keyword naslFunction lm_owf_gen
 syn keyword naslFunction ntv2_owf_gen
