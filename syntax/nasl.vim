@@ -1339,6 +1339,7 @@ syn keyword naslFunction xor
 syn keyword naslFunction xor8
 syn keyword naslFunction xscript_cvs_date
 syn keyword naslFunction xscript_end_attributes
+syn keyword naslFunction xscript_osvdb_id
 syn keyword naslFunction xscript_set_attribute
 syn keyword naslFunction zip_extract
 syn keyword naslFunction zip_parse
