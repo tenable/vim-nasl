@@ -1497,6 +1497,7 @@ syn keyword naslLibGlobal TLS_12
 syn keyword naslLibGlobal UNKNOWN_VER
 syn keyword naslLibGlobal HCF_CONNECT
 syn keyword naslLibGlobal HCF_NOAUTH
+syn keyword naslLibGlobal HCF_NOTIME
 syn keyword naslLibGlobal HCF_NOENT
 syn keyword naslLibGlobal HCF_ERR
 syn keyword naslLibGlobal HCF_NOVER
