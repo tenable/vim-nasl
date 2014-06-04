@@ -232,6 +232,7 @@ syn keyword naslFunction blowfish_decrypt
 syn keyword naslFunction blowfish_encipher
 syn keyword naslFunction blowfish_encrypt
 syn keyword naslFunction blowfish_initialize
+syn keyword naslFunction branch
 syn keyword naslFunction buffer_parameter
 syn keyword naslFunction build_url
 syn keyword naslFunction can_host_asp
@@ -937,6 +938,7 @@ syn keyword naslFunction pstring
 syn keyword naslFunction putbignum
 syn keyword naslFunction putbignum1
 syn keyword naslFunction putstring
+syn keyword naslFunction query_scratchpad
 syn keyword naslFunction qpkg_check
 syn keyword naslFunction qpkg_cmp
 syn keyword naslFunction qpkg_ver_cmp
