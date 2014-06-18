@@ -1343,6 +1343,7 @@ syn keyword naslFunction xscript_cvs_date
 syn keyword naslFunction xscript_end_attributes
 syn keyword naslFunction xscript_osvdb_id
 syn keyword naslFunction xscript_set_attribute
+syn keyword naslFunction xscript_set_cvss_base_vector
 syn keyword naslFunction zip_extract
 syn keyword naslFunction zip_parse
 
