@@ -2532,6 +2532,7 @@ syn keyword naslLibGlobal AUDIT_AUDIT_MISSING
 syn keyword naslLibGlobal AUDIT_AUDIT_NULL_ARG
 syn keyword naslLibGlobal AUDIT_AUDIT_UNKNOWN
 syn keyword naslLibGlobal AUDIT_BACKPORT_SERVICE
+syn keyword naslLibGlobal AUDIT_DEVICE_NOT_VULN
 syn keyword naslLibGlobal AUDIT_FN_FAIL
 syn keyword naslLibGlobal AUDIT_FN_UNDEF
 syn keyword naslLibGlobal AUDIT_HOST_NONE
