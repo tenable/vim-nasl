@@ -2643,9 +2643,11 @@ syn keyword naslLibGlobal HCF_UNACCESSIBLE_SHARE
 syn keyword naslLibGlobal HCF_ACCESSIBLE_SHARE
 
 
-" Keywords extracted from nasl_grammar.tab.c
-syn keyword naslKeyword if else for while repeat until foreach function return
-syn keyword naslKeyword include break local_var global_var continue
+" Keywords extracted from nasl_grammar.y
+syn keyword naslKeyword if else for do while repeat until foreach in function export return
+syn keyword naslKeyword include import break local_var global_var continue LINE_NUMBER object
+syn keyword naslKeyword var public private protected virtual base namespace FCT_ARGS switch
+syn keyword naslKeyword case default this
 
 " Special characters and strings
 syn match   naslSpecialChar display contained "\\\(x\x\{1,2}\|\o\{1,3}\|.\|$\)"
