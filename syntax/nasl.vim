@@ -2644,8 +2644,9 @@ syn keyword naslLibGlobal HCF_ACCESSIBLE_SHARE
 
 
 " Keywords extracted from nasl_grammar.tab.c
-syn keyword naslKeyword if else for while repeat until foreach function return
-syn keyword naslKeyword include break local_var global_var continue
+syn keyword naslKeyword if else for while repeat until foreach function return object
+syn keyword naslKeyword include break local_var global_var var continue
+syn keyword naslKeyword public
 
 " Special characters and strings
 syn match   naslSpecialChar display contained "\\\(x\x\{1,2}\|\o\{1,3}\|.\|$\)"
