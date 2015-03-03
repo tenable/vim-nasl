@@ -2327,7 +2327,6 @@ syn keyword naslFunction get_rpc_port
 syn keyword naslFunction http_recv_headers
 syn keyword naslFunction init_torture_cgi
 syn keyword naslFunction lm_owf_gen
-syn keyword naslFunction nb:
 syn keyword naslFunction nfs_cwd
 syn keyword naslFunction nt_owf_gen
 syn keyword naslFunction ntv2_owf_gen
