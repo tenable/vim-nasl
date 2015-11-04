@@ -3457,10 +3457,10 @@ syn keyword naslLibGlobal xpath_error_patterns
 syn keyword naslLibGlobal xss_cgi_params
 
 
-" Keywords extracted from nasl_grammar.tab.c
-syn keyword naslKeyword if else for while repeat until foreach function return object
+" Keywords extracted from nasl_grammar.y
+syn keyword naslKeyword if else for do while repeat until foreach function return object switch case
 syn keyword naslKeyword break local_var global_var var continue
-syn keyword naslInclude include import export
+syn keyword naslInclude include include_if import export
 syn keyword naslKeyword public
 
 " Special characters and strings
