@@ -1,11 +1,12 @@
 " Vim syntax file
 " Language:	NASL
 " Maintainer:	Herman Polloni <polloni@confianze.com>
-" Last Change:	2013 Aug 19
+" Last Change:	2015 Aug 14
 "
 " Updated by Jacob Hammack <jhammack@tenable.com>
 " Additional updates by Benjamin Bergman <bbergman@tenable.com>
 " Additional updates by Scott Walsh <swalsh@tenable.com>
+" Additional updates by Matthew Plough <mplough@tenable.com>
 
 " Remove any old syntax stuff that was loaded (5.x) or quit when a syntax file
 " was already loaded (6.x).
@@ -2644,7 +2645,8 @@ syn keyword naslLibGlobal HCF_ACCESSIBLE_SHARE
 
 " Keywords extracted from nasl_grammar.tab.c
 syn keyword naslKeyword if else for while repeat until foreach function return object
-syn keyword naslKeyword include break local_var global_var var continue
+syn keyword naslKeyword break local_var global_var var continue
+syn keyword naslInclude include import export
 syn keyword naslKeyword public
 
 " Special characters and strings
@@ -2652,11 +2654,14 @@ syn match   naslSpecialChar display contained "\\\(x\x\{1,2}\|\o\{1,3}\|.\|$\)"
 syn match   naslLongLink display contained "\"http://[^"]\{-64,}\"" containedin=naslString
 syn region  naslString	start=+L\="+ end=+"+ contains=@Spell,naslLongLink
 syn region  naslString	start=+L\='+ skip=+\\\\\|\\"+ end=+'+ contains=naslSpecialChar,@Spell,naslLongLink
-syn keyword naslSpecial description experimental_scripts report_verbosity debug_level thorough_tests report_paranoia supplied_logins_only _FCT_ANON_ARGS
+syn keyword naslSpecial description experimental_scripts report_verbosity debug_level thorough_tests report_paranoia supplied_logins_only _FCT_ANON_ARGS FUNCTION_NAME LINE_NUMBER
 syn match   naslSpecial display contained "CVSS2\v#AV:./AC:./Au:./C:./I:./A:." containedin=naslString
 
 " Comments
 syn region  naslComment	start="#" skip="\$" end="$" keepend contains=@Spell,naslSpaceError
+syn cluster naslCommentGroup contains=naslTodo
+syn region  naslComment start="#" skip="\\$" end="$" keepend contains=@naslCommentGroup
+syn keyword naslTodo contained TODO FIXME XXX
 
 " Hexadecimal and integer numbers
 syn match   naslNumbers display transparent "\<\d\|\.\d" contains=naslNumber
@@ -2689,11 +2694,11 @@ if version >= 508 || !exists("did_c_syn_inits")
   else
     command! -nargs=+ HiLink hi def link <args>
   endif
-  HiLink naslArg Identifier
+  HiLink naslArg Macro
   HiLink naslBracketError Error
   HiLink naslComment Comment
   HiLink naslConstant Constant
-  HiLink naslFunction StorageClass
+  HiLink naslFunction Function
   HiLink naslKeyword Conditional
   HiLink naslLibGlobal Define
   HiLink naslLongLink Error
@@ -2703,6 +2708,8 @@ if version >= 508 || !exists("did_c_syn_inits")
   HiLink naslSpecial Special
   HiLink naslSpecialChar SpecialChar
   HiLink naslString String
+  HiLink naslTodo Todo
+  HiLink naslInclude Include
 endif
 let b:current_syntax = "nasl"
 
