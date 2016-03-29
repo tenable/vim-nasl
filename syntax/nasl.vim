@@ -2767,6 +2767,8 @@ syn keyword naslConstant Z_DEFAULT_STRATEGY
 syn keyword naslConstant Z_FILTERED
 syn keyword naslConstant Z_HUFFMAN_ONLY
 syn keyword naslConstant Z_RLE
+syn keyword naslConstant false
+syn keyword naslConstant true
 syn keyword naslConstant FALSE
 syn keyword naslConstant TRUE
 
