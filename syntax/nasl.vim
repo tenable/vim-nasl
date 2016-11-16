@@ -3460,10 +3460,12 @@ syn keyword naslLibGlobal xss_cgi_params
 
 
 " Keywords extracted from nasl_grammar.y
-syn keyword naslKeyword if else for do while repeat until foreach function return object switch case
+syn keyword naslKeyword if else for do while repeat until foreach in of function return object switch case default
 syn keyword naslKeyword break local_var global_var var continue
 syn keyword naslInclude include include_if import export
-syn keyword naslKeyword public
+syn keyword naslKeyword public private protected virtual override super this extends
+syn keyword naslKeyword new namespace
+syn keyword naslKeyword synchronized
 
 " Special characters and strings
 syn match   naslSpecialChar display contained "\\\(x\x\{1,2}\|\o\{1,3}\|.\|$\)"
@@ -3471,15 +3473,17 @@ syn match   naslLongLink display contained "\"http://[^"]\{-64,}\"" containedin=
 syn match   naslLongLink display contained "\"https://[^"]\{-63,}\"" containedin=naslString
 syn region  naslString	start=+L\="+ end=+"+ contains=@Spell,naslLongLink
 syn region  naslString	start=+L\='+ skip=+\\\\\|\\"+ end=+'+ contains=naslSpecialChar,@Spell,naslLongLink
-syn keyword naslSpecial description experimental_scripts report_verbosity debug_level thorough_tests report_paranoia supplied_logins_only _FCT_ANON_ARGS FUNCTION_NAME LINE_NUMBER
+syn keyword naslSpecial description experimental_scripts report_verbosity debug_level thorough_tests report_paranoia supplied_logins_only _FCT_ANON_ARGS FCT_ARGS FUNCTION_NAME LINE_NUMBER
 syn match   naslSpecial display contained "CVSS2\v#AV:./AC:./Au:./C:./I:./A:." containedin=naslString
 
 " Comments
+syn region  naslComment	start="/\*" end="\*/" contains=@Spell,naslSpaceError
 syn region  naslComment	start="//" skip="\$" end="$" keepend contains=@Spell,naslSpaceError
 syn region  naslComment	start="#" skip="\$" end="$" keepend contains=@Spell,naslSpaceError
 syn cluster naslCommentGroup contains=naslTodo
 syn region  naslComment start="#" skip="\\$" end="$" keepend contains=@naslCommentGroup
 syn region  naslComment start="//" skip="\\$" end="$" keepend contains=@naslCommentGroup
+syn region  naslComment start="/\*" end="\*/" contains=@naslCommentGroup
 syn keyword naslTodo contained TODO FIXME XXX
 
 " Hexadecimal and integer numbers
