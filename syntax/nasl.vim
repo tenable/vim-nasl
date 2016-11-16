@@ -3475,11 +3475,13 @@ syn keyword naslSpecial description experimental_scripts report_verbosity debug_
 syn match   naslSpecial display contained "CVSS2\v#AV:./AC:./Au:./C:./I:./A:." containedin=naslString
 
 " Comments
+syn region  naslComment	start="/\*" end="\*/" contains=@Spell,naslSpaceError
 syn region  naslComment	start="//" skip="\$" end="$" keepend contains=@Spell,naslSpaceError
 syn region  naslComment	start="#" skip="\$" end="$" keepend contains=@Spell,naslSpaceError
 syn cluster naslCommentGroup contains=naslTodo
 syn region  naslComment start="#" skip="\\$" end="$" keepend contains=@naslCommentGroup
 syn region  naslComment start="//" skip="\\$" end="$" keepend contains=@naslCommentGroup
+syn region  naslComment start="/\*" end="\*/" contains=@naslCommentGroup
 syn keyword naslTodo contained TODO FIXME XXX
 
 " Hexadecimal and integer numbers
