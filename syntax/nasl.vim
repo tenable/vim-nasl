@@ -259,6 +259,8 @@ syn keyword naslFunction cstring
 syn keyword naslFunction cvsdate2unixtime
 syn keyword naslFunction cvss_vector_to_base_score
 syn keyword naslFunction cvss_vector_to_temporal_score
+syn keyword naslFunction cvss3_vector_to_base_score
+syn keyword naslFunction cvss3_vector_to_temporal_score
 syn keyword naslFunction cyberark_demo
 syn keyword naslFunction date_cmp
 syn keyword naslFunction dce_rpc
@@ -1421,6 +1423,8 @@ syn keyword naslFunction script_osvdb_id
 syn keyword naslFunction script_set_attribute
 syn keyword naslFunction script_set_cvss_base_vector
 syn keyword naslFunction script_set_cvss_temporal_vector
+syn keyword naslFunction script_set_cvss3_base_vector
+syn keyword naslFunction script_set_cvss3_temporal_vector
 syn keyword naslFunction security_report_v4
 syn keyword naslFunction send_rexec
 syn keyword naslFunction send_rsh
@@ -1852,6 +1856,8 @@ syn keyword naslFunction xscript_osvdb_id
 syn keyword naslFunction xscript_set_attribute
 syn keyword naslFunction xscript_set_cvss_base_vector
 syn keyword naslFunction xscript_set_cvss_temporal_vector
+syn keyword naslFunction xscript_set_cvss3_base_vector
+syn keyword naslFunction xscript_set_cvss3_temporal_vector
 syn keyword naslFunction zip_extract
 syn keyword naslFunction zip_parse
 
@@ -3116,6 +3122,7 @@ syn keyword naslLibGlobal CookieJar_value
 syn keyword naslLibGlobal CookieJar_version
 syn keyword naslLibGlobal crc32tab
 syn keyword naslLibGlobal cvss_score
+syn keyword naslLibGlobal cvss3_score
 syn keyword naslLibGlobal deb_report
 syn keyword naslLibGlobal DEFAULT_HEADER
 syn keyword naslLibGlobal details
@@ -3475,6 +3482,7 @@ syn region  naslString	start=+L\="+ end=+"+ contains=@Spell,naslLongLink
 syn region  naslString	start=+L\='+ skip=+\\\\\|\\"+ end=+'+ contains=naslSpecialChar,@Spell,naslLongLink
 syn keyword naslSpecial description experimental_scripts report_verbosity debug_level thorough_tests report_paranoia supplied_logins_only _FCT_ANON_ARGS FCT_ARGS FUNCTION_NAME LINE_NUMBER
 syn match   naslSpecial display contained "CVSS2\v#AV:./AC:./Au:./C:./I:./A:." containedin=naslString
+syn match   naslSpecial display contained "CVSS:3.0\v/AV:./AC:./PR:./UI:./S:./C:./I:./A:." containedin=naslString
 
 " Comments
 syn region  naslComment	start="/\*" end="\*/" contains=@Spell,naslSpaceError
