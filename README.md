@@ -23,7 +23,7 @@ autocmd BufNewFile,BufRead *.inc set indentexpr=
 To set the recommended formatting settings for NASL files, add this too:
 
 ```vim
-autocmd FileType nasl setlocal shiftwidth=2 tabstop=2 expandtab softtabstop=2 colorcolumn=70
+autocmd FileType nasl setlocal shiftwidth=2 tabstop=2 expandtab softtabstop=2 colorcolumn=120
 ```
 
 [Syntastic]
